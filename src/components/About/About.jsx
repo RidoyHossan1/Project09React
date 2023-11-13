@@ -13,6 +13,10 @@ export default function About(props) {
   let outerStyle = {
     backgroundColor: props.mode === "dark" ? "#264653" : "white",
   };
+
+  document.title = "Coder - About";
+
+
   return (
     <div className={`py-16`} style={outerStyle}>
       <div

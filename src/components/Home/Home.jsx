@@ -49,6 +49,9 @@ export default function Home(props) {
   const handleOnChange = (event) => {
     setText(event.target.value);
   };
+
+  document.title = "Coder - Home";
+
   return (
     <>
       <div
