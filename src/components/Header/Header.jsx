@@ -68,9 +68,7 @@ export default function Header(props) {
 
         <div className="absolute top-4 right-4">
           <div
-            className={`mx-2 form-check form-switch text-${
-              props.mode === "light" ? "dark" : "light"
-            }`}
+            className={`mx-2 form-check form-switch text-black`}
           >
             <input
               className="form-check-input"
@@ -86,8 +84,6 @@ export default function Header(props) {
               Enable Dark Mode
             </label>
           </div>
-
-          
         </div>
       </nav>
     </header>
