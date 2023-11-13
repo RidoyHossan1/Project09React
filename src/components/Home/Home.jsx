@@ -5,7 +5,6 @@ export default function Home(props) {
   const [text, setText] = useState("Enter text here");
 
   const upcaseClick = () => {
-    console.log("Uppercase Clicked");
     let newTxt = text.toUpperCase();
     setText(newTxt);
 
@@ -13,7 +12,6 @@ export default function Home(props) {
   };
 
   const lowcaseClick = () => {
-    console.log("Lowercase Clicked");
     let newTxt = text.toLowerCase();
     setText(newTxt);
 
@@ -21,7 +19,6 @@ export default function Home(props) {
   };
 
   const titleClick = () => {
-    console.log("Title Clicked");
     let newTxt = text.toLowerCase().replace(/\b\w/g, function (char) {
       return char.toUpperCase();
     });
@@ -31,16 +28,12 @@ export default function Home(props) {
   };
 
   const copyTextClick = () => {
-    console.log("Copy Text Clicked");
-    var text = document.getElementById("myBox");
-    text.select();
-    navigator.clipboard.writeText(text.value);
+    navigator.clipboard.writeText(text);
 
     props.showAlert("Text Copied", "success");
   };
 
   const removeSpaceClick = () => {
-    console.log("Remove Extra Spaces Clicked");
     let newTxt = text.split(/[ ]+/);
     setText(newTxt.join(" "));
 
@@ -48,14 +41,12 @@ export default function Home(props) {
   };
 
   const clearClick = () => {
-    console.log("Clear Clicked");
     setText("");
 
     props.showAlert("Clear Text", "danger");
   };
 
   const handleOnChange = (event) => {
-    console.log("Value");
     setText(event.target.value);
   };
   return (
@@ -108,7 +99,12 @@ export default function Home(props) {
           <div className="container my-5 p-0">
             <h2 className="font-bold text-3xl mb-2">Your Text Summary</h2>
             <p className="text-xl">
-              {text.split(" ").length} words and {text.length} characters
+              {
+                text.split(/\s+/).filter((element) => {
+                  return element.length !== 0;
+                }).length
+              }{" "}
+              words and {text.length} characters
             </p>
             <p className="text-xl">
               It can be read in {0.008 * text.split(" ").length} Minute

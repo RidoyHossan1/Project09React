@@ -66,7 +66,7 @@ export default function Header(props) {
           </div>
         </div>
 
-        <div class="absolute top-4 right-4">
+        <div className="absolute top-4 right-4">
           <div
             className={`mx-2 form-check form-switch text-${
               props.mode === "light" ? "dark" : "light"
@@ -87,25 +87,7 @@ export default function Header(props) {
             </label>
           </div>
 
-          <div
-            className={`mx-2 form-check form-switch text-${
-              props.mode === "light" ? "dark" : "light"
-            }`}
-          >
-            <input
-              className="form-check-input"
-              type="checkbox"
-              role="switch"
-              id="flexSwitchCheckDefault"
-              onClick={props.toggleModeBlue}
-            />
-            <label
-              className="form-check-label"
-              htmlFor="flexSwitchCheckDefault"
-            >
-              Enable Blue Mode
-            </label>
-          </div>
+          
         </div>
       </nav>
     </header>

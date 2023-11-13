@@ -32,17 +32,6 @@ function App() {
     }
   };
 
-  const toggleBlue = () => {
-    if (modeBlue === "light") {
-      setModeBlue("#90e0ef");
-      document.body.style.backgroundColor = "#90e0ef";
-      showAlert("Blue Mode Enabled", "success");
-    } else {
-      setModeBlue("light");
-      document.body.style.backgroundColor = "white";
-      showAlert("Light Mode Enabled", "success");
-    }
-  };
 
   const showAlert = (message, type) => {
     setAlert({
@@ -56,13 +45,13 @@ function App() {
   };
   return (
     <>
-      <Header mode={mode} toggleMode={toggle} toggleModeBlue={toggleBlue} />
+      <Header mode={mode} toggleMode={toggle} />
       <Alert alert={alert} />
 
       <Routes>
         <Route path="/" element={<Home mode={mode} showAlert={showAlert} />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About mode={mode}/>} />
+        <Route path="/contact" element={<Contact mode={mode}/>} />
       </Routes>
 
       <Footer mode={mode} />

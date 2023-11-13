@@ -1,27 +1,48 @@
 import React from "react";
 
-export default function About() {
+export default function About(props) {
+  let myStyle = {
+    color: props.mode === "dark" ? "white" : "#264653",
+    backgroundColor: props.mode === "dark" ? "#264653" : "white",
+  };
+
+  let txtStyle = {
+    color: props.mode === "dark" ? "white" : "#264653",
+  };
+
+  let outerStyle = {
+    backgroundColor: props.mode === "dark" ? "#264653" : "white",
+  };
   return (
-    <div className="py-16 bg-white">
-      <div className="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-        <div className="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
-          <div className="md:5/12 lg:w-3/12">
+    <div className={`py-16`} style={outerStyle}>
+      <div
+        className={`container m-auto px-6 text-gray-600 md:px-12 xl:px-6`}
+        style={myStyle}
+      >
+        <div
+          className={`space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12`}
+          
+        >
+          <div className="md:5/12 lg:w-3/12" >
             <img
-              src="https://unsplash.com/photos/calendar-8XaM86qk9Ac"
+              src="https://images.unsplash.com/photo-1664454715791-00fa65761ea1?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="image"
             />
           </div>
-          <div className="md:7/12 lg:w-6/12">
-            <h2 className="text-2xl text-gray-900 font-bold md:text-4xl">
+          <div className="md:7/12 lg:w-6/12" >
+            <h2
+              className="text-2xl text-gray-900 font-bold md:text-4xl"
+              style={txtStyle}
+            >
               Lorem ipsum dolor sit amet
             </h2>
-            <p className="mt-6 text-gray-600">
+            <p className="mt-6 text-gray-600" style={txtStyle}>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum
               omnis voluptatem accusantium nemo perspiciatis delectus atque
               autem! Voluptatum tenetur beatae unde aperiam, repellat expedita
               consequatur! Officiis id consequatur atque doloremque!
             </p>
-            <p className="mt-4 text-gray-600">
+            <p className="mt-4 text-gray-600" style={txtStyle}>
               Nobis minus voluptatibus pariatur dignissimos libero quaerat iure
               expedita at? Asperiores nemo possimus nesciunt dicta veniam
               aspernatur quam mollitia.
