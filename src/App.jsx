@@ -57,15 +57,15 @@ function App() {
   return (
     <>
       <Header mode={mode} toggleMode={toggle} toggleModeBlue={toggleBlue} />
-      <Alert alert={alert}/>
+      <Alert alert={alert} />
 
       <Routes>
-        <Route path="" element={<Home mode={mode} showAlert={showAlert} />} />
+        <Route path="/" element={<Home mode={mode} showAlert={showAlert} />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
 
-      <Footer mode={mode}/>
+      <Footer mode={mode} />
     </>
   );
 }
