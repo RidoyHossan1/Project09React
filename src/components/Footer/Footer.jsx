@@ -7,12 +7,8 @@ export default function Footer(props) {
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
-            <Link to="/" className="flex items-center">
-              <img
-                src="./../../../public/logo.png"
-                className="mr-3 h-16"
-                alt="Logo"
-              />
+            <Link to="#" className="flex items-center">
+              <img src="./../logo.png" className="mr-3 h-16" alt="Logo" />
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
@@ -24,11 +20,13 @@ export default function Footer(props) {
               >
                 Resources
               </h2>
-              <ul className={`text-${
+              <ul
+                className={`text-${
                   props.mode === "light" ? "gray-500" : "light"
-                } font-medium`}>
+                } font-medium`}
+              >
                 <li className="mb-4">
-                  <Link to="/" className="hover:underline">
+                  <Link to="#" className="hover:underline">
                     Home
                   </Link>
                 </li>
@@ -40,35 +38,43 @@ export default function Footer(props) {
               </ul>
             </div>
             <div>
-              <h2 className={`mb-6 text-sm font-semibold text-${
+              <h2
+                className={`mb-6 text-sm font-semibold text-${
                   props.mode === "light" ? "gray-500" : "light"
-                } uppercase`}>
+                } uppercase`}
+              >
                 Follow us
               </h2>
-              <ul className={`text-${
+              <ul
+                className={`text-${
                   props.mode === "light" ? "gray-500" : "light"
-                } font-medium`}>
+                } font-medium`}
+              >
                 <li className="mb-4">
-                  <Link to="/" className="hover:underline">
+                  <Link to="#" className="hover:underline">
                     Github
                   </Link>
                 </li>
                 <li>
-                  <Link to="/" className="hover:underline">
+                  <Link to="#" className="hover:underline">
                     Discord
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
-              <h2 className={`mb-6 text-sm font-semibold text-${
+              <h2
+                className={`mb-6 text-sm font-semibold text-${
                   props.mode === "light" ? "gray-900" : "light"
-                } uppercase`}>
+                } uppercase`}
+              >
                 Legal
               </h2>
-              <ul className={`text-${
+              <ul
+                className={`text-${
                   props.mode === "light" ? "gray-500" : "light"
-                } font-medium`}>
+                } font-medium`}
+              >
                 <li className="mb-4">
                   <Link to="#" className="hover:underline">
                     Privacy Policy
@@ -83,21 +89,26 @@ export default function Footer(props) {
             </div>
           </div>
         </div>
-        <hr className={`my-6 border-${
-                  props.mode === "light" ? "gray-200" : "light"
-                } sm:mx-auto lg:my-8`} />
+        <hr
+          className={`my-6 border-${
+            props.mode === "light" ? "gray-200" : "light"
+          } sm:mx-auto lg:my-8`}
+        />
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className={`text-sm text-${
-                  props.mode === "light" ? "gray-200" : "light"
-                } sm:text-center`}>
+          <span
+            className={`text-sm text-${
+              props.mode === "light" ? "gray-200" : "light"
+            } sm:text-center`}
+          >
             © 2023 Ridoy. All Rights Reserved.
           </span>
           <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
-            <Link to="#" className={`text-${
-                  props.mode === "light" ? "gray-500" : "light"
-                } hover:text-${
-                  props.mode === "light" ? "gray-900" : "light"
-                }`}>
+            <Link
+              to="#"
+              className={`text-${
+                props.mode === "light" ? "gray-500" : "light"
+              } hover:text-${props.mode === "light" ? "gray-900" : "light"}`}
+            >
               <svg
                 className="w-4 h-4"
                 aria-hidden="true"
@@ -113,9 +124,12 @@ export default function Footer(props) {
               </svg>
               <span className="sr-only">Facebook page</span>
             </Link>
-            <Link to="#" className={`text-${
-                  props.mode === "light" ? "gray-500" : "light"
-                }`}>
+            <Link
+              to="#"
+              className={`text-${
+                props.mode === "light" ? "gray-500" : "light"
+              }`}
+            >
               <svg
                 className="w-4 h-4"
                 aria-hidden="true"
@@ -127,9 +141,12 @@ export default function Footer(props) {
               </svg>
               <span className="sr-only">Discord community</span>
             </Link>
-            <Link to="#" className={`text-${
-                  props.mode === "light" ? "gray-500" : "light"
-                }`}>
+            <Link
+              to="#"
+              className={`text-${
+                props.mode === "light" ? "gray-500" : "light"
+              }`}
+            >
               <svg
                 className="w-4 h-4"
                 aria-hidden="true"
@@ -145,9 +162,12 @@ export default function Footer(props) {
               </svg>
               <span className="sr-only">Twitter page</span>
             </Link>
-            <Link to="#" className={`text-${
-                  props.mode === "light" ? "gray-500" : "light"
-                }`}>
+            <Link
+              to="#"
+              className={`text-${
+                props.mode === "light" ? "gray-500" : "light"
+              }`}
+            >
               <svg
                 className="w-4 h-4"
                 aria-hidden="true"
@@ -163,9 +183,12 @@ export default function Footer(props) {
               </svg>
               <span className="sr-only">GitHub account</span>
             </Link>
-            <Link to="#" className={`text-${
-                  props.mode === "light" ? "gray-500" : "light"
-                }`}>
+            <Link
+              to="#"
+              className={`text-${
+                props.mode === "light" ? "gray-500" : "light"
+              }`}
+            >
               <svg
                 className="w-4 h-4"
                 aria-hidden="true"

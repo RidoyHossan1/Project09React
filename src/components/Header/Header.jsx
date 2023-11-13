@@ -6,12 +6,8 @@ export default function Header(props) {
     <header className="shadow sticky z-50 top-0 text-xl">
       <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 relative">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-          <Link to="/" className="flex items-center">
-            <img
-              src="./../../../public/logo.png"
-              className="mr-3 h-12 my-auto"
-              alt="Logo"
-            />
+          <Link to="#" className="flex items-center">
+            <img src="./../logo.png" className="mr-3 h-12 my-auto" alt="Logo" />
           </Link>
           <div className="flex items-center lg:order-2">
             <Link
@@ -71,7 +67,11 @@ export default function Header(props) {
         </div>
 
         <div class="absolute top-4 right-4">
-        <div className={`mx-2 form-check form-switch text-${props.mode === 'light' ? 'dark':'light'}`}>
+          <div
+            className={`mx-2 form-check form-switch text-${
+              props.mode === "light" ? "dark" : "light"
+            }`}
+          >
             <input
               className="form-check-input"
               type="checkbox"
@@ -79,13 +79,19 @@ export default function Header(props) {
               id="flexSwitchCheckDefault"
               onClick={props.toggleMode}
             />
-            <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
+            <label
+              className="form-check-label"
+              htmlFor="flexSwitchCheckDefault"
+            >
               Enable Dark Mode
             </label>
           </div>
 
-
-          <div className={`mx-2 form-check form-switch text-${props.mode === 'light' ? 'dark':'light'}`}>
+          <div
+            className={`mx-2 form-check form-switch text-${
+              props.mode === "light" ? "dark" : "light"
+            }`}
+          >
             <input
               className="form-check-input"
               type="checkbox"
@@ -93,12 +99,14 @@ export default function Header(props) {
               id="flexSwitchCheckDefault"
               onClick={props.toggleModeBlue}
             />
-            <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
+            <label
+              className="form-check-label"
+              htmlFor="flexSwitchCheckDefault"
+            >
               Enable Blue Mode
             </label>
           </div>
         </div>
-
       </nav>
     </header>
   );
